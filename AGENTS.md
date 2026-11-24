@@ -1,9 +1,24 @@
-<!-- BEGIN:nextjs-agent-rules -->
+# Consignes pour l'agent
 
-## This is NOT the Next.js you know
+## Stack
+- Next.js 16, App Router, TypeScript strict, Tailwind CSS.
+- Les composants interactifs sont dans app/components et commencent par "use client".
 
-This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+## Outils MCP disponibles
+- tickets : lister_tickets, lire_ticket, changer_statut
+- next-devtools : erreurs, logs et routes de l'appli en cours d'exécution
+- playwright : navigateur pour tester l'interface
 
-This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+## Workflow pour traiter un ticket
+1. Lis le ticket avec lire_ticket.
+2. Passe-le en "En cours" avec changer_statut.
+3. Fais la modification la plus petite possible.
+4. Vérifie avec next-devtools qu'il n'y a aucune erreur.
+5. Vérifie le comportement avec playwright sur http://localhost:3000.
+6. Seulement si 4 et 5 sont OK : passe le ticket en "En revue" (jamais "Terminé", c'est moi qui valide).
+7. Résume ce que tu as changé et comment tu l'as vérifié.
 
-<!-- END:nextjs-agent-rules -->
+## Interdits
+- Ne modifie jamais tickets.json directement : utilise l'outil changer_statut.
+- Ne modifie jamais .vscode/mcp.json.
+- N'installe aucune dépendance sans me demander.

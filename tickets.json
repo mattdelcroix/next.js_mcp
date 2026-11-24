@@ -1,0 +1,20 @@
+[
+  {
+    "id": "TASK-12",
+    "titre": "Bouton Ajouter sans message d'erreur",
+    "description": "Quand le champ est vide et qu'on clique sur Ajouter, rien ne se passe. Afficher le message 'Saisis une tâche' en rouge sous le champ. Le message doit disparaître dès qu'une tâche valide est ajoutée.",
+    "statut": "A faire"
+  },
+  {
+    "id": "TASK-13",
+    "titre": "Compteur de tâches restantes",
+    "description": "Afficher sous le titre 'X tâche(s) restante(s)' en comptant les tâches non cochées. Accorder le pluriel correctement.",
+    "statut": "A faire"
+  },
+  {
+    "id": "TASK-14",
+    "titre": "Erreur rouge en bas de l'écran au chargement",
+    "description": "Un utilisateur signale un badge d'erreur rouge en bas à gauche de la page en développement. Trouver la cause et corriger.",
+    "statut": "A faire"
+  }
+]

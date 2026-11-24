@@ -1,0 +1,16 @@
+{
+  "servers": {
+    "tickets": {
+      "command": "npx",
+      "args": ["tsx", "mcp/tickets.ts"]
+    },
+    "next-devtools": {
+      "command": "npx",
+      "args": ["-y", "next-devtools-mcp@latest"]
+    },
+    "playwright": {
+      "command": "npx",
+      "args": ["@playwright/mcp@latest"]
+    }
+  }
+}
